@@ -200,19 +200,60 @@ string addorsub(const string &num1, const string &num2)
     }
 }
 
+string factorial(const string &num)
+{
+    string result = "1";
+    string counter = "2";
+    while (compare(counter, num) <= 0)
+    {
+        result = vector_string(multiply(string_vector(result), string_vector(counter)));
+        counter = addorsub(counter, "1");
+    }
+    return result;
+}
+
+string npr(const string &n, const string &r)
+{
+    string fectofn = factorial(n);
+    string nminr = subwithsign(n, r);
+    if (nminr[0] == '-')
+        return "0";
+    string nminrfect = factorial(nminr);
+    pair<string, string> div = divide_mod(fectofn, nminrfect);
+    return div.first;
+}
+
+string ncr(const string &n, const string &r)
+{
+    string fectofn = factorial(n);
+    string rfect = factorial(r);
+    string nminr = subwithsign(n, r);
+    if (nminr[0] == '-')
+        return "0";
+    string nminrfect = factorial(nminr);
+    string denom = vector_string(multiply(string_vector(rfect), string_vector(nminrfect)));
+    pair<string, string> div = divide_mod(fectofn, denom);
+    return div.first;
+}
+
 int main()
 {
     string num1, num2;
     char op;
 
+    string result;
     cout << "Enter first number: ";
     cin >> num1;
-    cout << "Enter operatin (+, -, *, /, %): ";
+    cout << "Enter operator (+, -, *, /, %, !, P, C): ";
+    if (op == '!')
+    {
+        result = factorial(num1);
+        cout << result << endl;
+        return 0;
+    }
     cin >> op;
     cout << "Enter second number: ";
     cin >> num2;
-
-    string result;
 
     if (op == '+')
     {
@@ -252,6 +293,14 @@ int main()
                 divmod.second = "-" + divmod.second;
             result = divmod.second;
         }
+    }
+    else if (op == 'P')
+    {
+        result = npr(num1, num2);
+    }
+    else if (op == 'C')
+    {
+        result = ncr(num1, num2);
     }
     else
     {
