@@ -177,7 +177,6 @@ bigint setbigint(const string &str)
     return result;
 }
 
-// Add or subtract depending on sign
 string addorsub(const string &num1, const string &num2)
 {
     bigint a = setbigint(num1);
