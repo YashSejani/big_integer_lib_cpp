@@ -244,17 +244,20 @@ int main()
     string result;
     cout << "Enter first number: " << endl;
     cin >> num1;
-    cout << "Enter operator (+, -, *, /, %, !, P, C): " << endl;
+    cout << endl
+         << "Enter operator (+, -, *, /, %, !, P, C): " << endl;
     cin >> op;
+    cout << endl;
     if (op == '!')
     {
         result = factorial(num1);
-        cout << result << endl;
+        cout << "result: " << endl
+             << result << endl;
         return 0;
     }
     cout << "Enter second number: " << endl;
     cin >> num2;
-
+    cout << endl;
     if (op == '+')
     {
         result = addorsub(num1, num2);
@@ -307,6 +310,7 @@ int main()
         cout << "Invalid operator!" << endl;
     }
 
-    cout << result << endl;
+    cout << "result: " << endl
+         << result << endl;
     return 0;
 }
