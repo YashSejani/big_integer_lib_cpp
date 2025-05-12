@@ -242,9 +242,9 @@ int main()
     char op;
 
     string result;
-    cout << "Enter first number: ";
+    cout << "Enter first number: " << endl;
     cin >> num1;
-    cout << "Enter operator (+, -, *, /, %, !, P, C): ";
+    cout << "Enter operator (+, -, *, /, %, !, P, C): " << endl;
     if (op == '!')
     {
         result = factorial(num1);
@@ -252,7 +252,7 @@ int main()
         return 0;
     }
     cin >> op;
-    cout << "Enter second number: ";
+    cout << "Enter second number: " << endl;
     cin >> num2;
 
     if (op == '+')
