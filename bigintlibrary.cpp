@@ -245,13 +245,13 @@ int main()
     cout << "Enter first number: " << endl;
     cin >> num1;
     cout << "Enter operator (+, -, *, /, %, !, P, C): " << endl;
+    cin >> op;
     if (op == '!')
     {
         result = factorial(num1);
         cout << result << endl;
         return 0;
     }
-    cin >> op;
     cout << "Enter second number: " << endl;
     cin >> num2;
 
