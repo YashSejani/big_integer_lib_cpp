@@ -1,6 +1,6 @@
 # Big Integer Library
 
-A C++ library for performing arithmetic operations (+, –, ×, ÷, %, factorial, permutations, and combinations) on arbitrarily large integers using only STL data structures—no OOP required.
+A C++ library for performing arithmetic operations (+, –, ×, ÷, %, factorial, permutations, and combinations) on arbitrarily large integers using data structures.
 
 ## 🚀 Features
 
