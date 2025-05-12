@@ -16,7 +16,7 @@ A C++ library for performing arithmetic operations (+, –, ×, ÷, %, factorial
   - Combination (nCr)
 - Handles negative numbers
 - Input and output through strings
-- Fully implemented using basic C++ (no OOP)
+- Fully implemented using basic C++
 
 ## 📦 How It Works
 
@@ -51,14 +51,10 @@ Result: 1219326311370217952237463801111263526900
 ## 🔗 Repository Structure
 
 ```
-├── main.cpp         # Main driver and logic
-├── README.md        # Project documentation
+├── bigintlibrary.cpp   # Main driver and logic
+├── README.md           # Project documentation
 ```
 
 ## 🤝 Contributing
 
 Contributions, issues, and suggestions are welcome! Fork the repo and open a pull request.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
